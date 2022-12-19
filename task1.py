@@ -79,9 +79,13 @@ class SportCar(Car):
 
     def __init__(self, carClass: str, engine: Engine, driver: Driver, marka: str, carWeight: int, speed: float) -> None:
         super().__init__(carClass, engine, driver, marka, carWeight)
-        self.carWeight = carWeight
+        self.speed = speed
 
     def __str__(self) -> str:
         return super().__str__() + f'Speed: {self.speed}'
 
+
+c = SportCar(carClass="a", engine=Engine(power=4, company="s"), driver=Driver(name="akma", surname="yeg", age=4, experience=4), marka="as",
+carWeight=48, speed=4.2)
+print(c)
 
